@@ -1,22 +1,17 @@
-output_list = ""
 
+print("Welcome to Fizzbuzz!")
+guess = int(input("please choose a number to start with\n"))
 
-def divisible_by(fb_num, db_num):
-    return True if(fb_num % db_num == 0) else False
-
-
-def fizz_buzz():
-    output_list = ""
-    for i in range(1, 101):
+max_number = int(input("choose a maximum number\n"))
+game_number = True
+while game_number:
+    for i in range(1, max_number):
         if i % 3 == 0 and i % 5 == 0:
-            output_list += '"FizzBuzz", '
+            print("FizzBuzz")
         elif i % 3 == 0:
-            output_list += '"Fizz", '
+            print("Fizz")
         elif i % 5 == 0:
-            output_list += '"Buzz", '
+            print("Buzz")
         else:
-            output_list += f'"{str(i)}", '
-    return output_list
-
-
-print(fizz_buzz())
+            print(i)
+print("thank you for playing fizzbuzz!")
